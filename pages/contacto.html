@@ -1,35 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Contacto | Rienda</title>
 </head>
 <body>
-      <header>
-        <nav>
+    <header>
+        <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="./pages/sobrenosotros.html">Nosotros</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="sobrenosotros.html">Nosotros</a></li>
+                <li><a href="datos.html">Datos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h1>Contactanos</h1>
+        <section>
+            <h2>Escribinos</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+
+                    <p>
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="2" autocomplete="name">
+                    </p>
+                    <p>
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </p>
+                    <p>
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+                    </p>
+                    <p>
+                        <label for="motivo">Motivo de la consulta</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="">Elegí una opción</option>
+                            <option value="info">Quiero conocer más sobre Rienda</option>
+                            <option value="soporte">Necesito ayuda con la app</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" maxlength="500"></textarea>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="acepto" name="acepto" required>
+                        <label for="acepto">Acepto que me contacten por este medio</label>
+                    </p>
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>Dónde estamos</h2>
+            <p>Trabajamos desde Córdoba, Argentina.</p>
+            <iframe title="Mapa de Córdoba, Argentina" width="600" height="400"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-64.30%2C-31.48%2C-64.08%2C-31.34&amp;layer=mapnik"
+                loading="lazy"></iframe>
+        </section>
     </main>
-    
-      <footer>
-         <nav>
+
+    <footer>
+        <nav aria-label="Navegación del pie de página">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="./pages/sobrenosotros.html">Nosotros</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="sobrenosotros.html">Nosotros</a></li>
+                <li><a href="datos.html">Datos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-
-        <small></small><span id="current-year">© 2026</span> Gonzalo Corradi. Todos los derechos reservados.</small>
+        <p><small>&copy; 2026 Gonzalo Corradi. Todos los derechos reservados.</small></p>
     </footer>
 </body>
 </html>
